@@ -10,6 +10,10 @@
 ########################################
 
 set -x #debug mode
+set -e #exit when there is an error
+set -o #pipefail
+
+#jkcdjs #to test set -e
 
 echo "############################ memory usage:- ####################################"
 
@@ -30,6 +34,10 @@ ps -ef
 echo "#################################### additional details ####################################"
 
 neofetch
+
+echo "#################################### pid of processes using python ####################################"
+
+ps -ef | grep python | awk -F" " '{print $2}'
 
 echo "#################################### summary  ####################################"
 
