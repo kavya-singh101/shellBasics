@@ -7,6 +7,9 @@ API_URL="https://api.github.com"
 USERNAME=$username
 TOKEN=$token
 
+helper
+
+#organisation-name repon-ame
 # User and Repository information
 REPO_OWNER=$1
 REPO_NAME=$2
@@ -35,6 +38,11 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+
+function helper {
+ expected_cmd_agrs=2
+ if [ $# -ne $expected_cmd_args ]; then
+  echo "not provided required arguments"
 
 # Main script
 
