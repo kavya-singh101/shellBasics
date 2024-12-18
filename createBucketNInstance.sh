@@ -26,3 +26,5 @@ aws ec2 describe-instances >> InstancesDeatil.txt
 echo "List of S3 buckets"
 aws s3 ls >> s3list.txt
 
+echo "Instance's IDs"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
