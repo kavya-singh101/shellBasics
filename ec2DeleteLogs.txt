@@ -58,3 +58,138 @@
         }
     ]
 }
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 32,
+                "Name": "shutting-down"
+            },
+            "InstanceId": "i-0e355e525efc7a1df",
+            "PreviousState": {
+                "Code": 16,
+                "Name": "running"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 48,
+                "Name": "terminated"
+            },
+            "InstanceId": "i-0e355e525efc7a1df",
+            "PreviousState": {
+                "Code": 48,
+                "Name": "terminated"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 48,
+                "Name": "terminated"
+            },
+            "InstanceId": "i-0e355e525efc7a1df",
+            "PreviousState": {
+                "Code": 48,
+                "Name": "terminated"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 48,
+                "Name": "terminated"
+            },
+            "InstanceId": "i-0e355e525efc7a1df",
+            "PreviousState": {
+                "Code": 48,
+                "Name": "terminated"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 32,
+                "Name": "shutting-down"
+            },
+            "InstanceId": "i-007b2648e978cea7e",
+            "PreviousState": {
+                "Code": 16,
+                "Name": "running"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 32,
+                "Name": "shutting-down"
+            },
+            "InstanceId": "i-05a0444b49341a5fe",
+            "PreviousState": {
+                "Code": 16,
+                "Name": "running"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 32,
+                "Name": "shutting-down"
+            },
+            "InstanceId": "i-057aca84361c5d7e2",
+            "PreviousState": {
+                "Code": 16,
+                "Name": "running"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 48,
+                "Name": "terminated"
+            },
+            "InstanceId": "i-057aca84361c5d7e2",
+            "PreviousState": {
+                "Code": 48,
+                "Name": "terminated"
+            }
+        }
+    ]
+}
+{
+    "TerminatingInstances": [
+        {
+            "CurrentState": {
+                "Code": 32,
+                "Name": "shutting-down"
+            },
+            "InstanceId": "i-096301d3df36c396f",
+            "PreviousState": {
+                "Code": 16,
+                "Name": "running"
+            }
+        }
+    ]
+}

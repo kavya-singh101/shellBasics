@@ -8,15 +8,19 @@
 # Version: V1
 ###################################
 
-set -x
+#set -x
 set -e
 
+if [[ "$1" != "x" ]]; then
 echo "Creating an s3 bucket"
 aws s3api create-bucket --bucket $1 --region us-east-1 >> createdBucketDetail.txt
+fi
 
+#if [[ "$2" != "x" ]]; then
+if [[ -n "$2" && "$2" != "x" ]]; then
 echo "creating an Instance"
 aws ec2 run-instances --image-id ami-0b0ea68c435eb488d --count 1 --instance-type t2.micro --key-name test --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$2}]" >> createdInstanceDetail.txt
-
+fi
 #####################################################################################
 echo "Stroring logs"
 
