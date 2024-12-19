@@ -16,10 +16,28 @@ echo "Creating an s3 bucket"
 aws s3api create-bucket --bucket $1 --region us-east-1 >> createdBucketDetail.txt
 fi
 
+INSTANCE_COUNT=1
+
+if [[ -n "$3" ]]; then
+    if ! [[ "$3" =~ ^[1-9][0-9]*$ ]]; then
+        echo "Error: The third argument must be a positive integer."
+        exit 1
+    fi
+    INSTANCE_COUNT=$3
+fi
+
 #if [[ "$2" != "x" ]]; then
 if [[ -n "$2" && "$2" != "x" ]]; then
 echo "creating an Instance"
-aws ec2 run-instances --image-id ami-0b0ea68c435eb488d --count 1 --instance-type t2.micro --key-name test --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$2}]" >> createdInstanceDetail.txt
+#aws ec2 run-instances \
+#  --image-id ami-0c2b8ca1dad447f8a \   # Ubuntu 20.04 LTS AMI for us-east-1
+#  --count $3 \
+#  --instance-type t2.micro \           # Default instance type (you can choose a different one if needed)
+#  --key-name test.pem \                # The public key to associate with the instance
+#  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=$2}]' \
+#  --region us-east-1 >>
+
+aws ec2 run-instances --image-id ami-0c2b8ca1dad447f8a --count $INSTANCE_COUNT --instance-type t2.micro --key-name test --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$2}]" >> createdInstanceDetail.txt
 fi
 #####################################################################################
 echo "Stroring logs"
